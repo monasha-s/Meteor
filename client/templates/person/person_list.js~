@@ -1,0 +1,11 @@
+Template.personList.helpers({
+	persons: function() {
+		return Persons.find();
+	}
+});
+
+Template.postsList.helpers({
+	posts: function() {
+		return Posts.find();
+	}
+});

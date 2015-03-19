@@ -1,0 +1,47 @@
+Persons = new Mongo.Collection('persons');
+
+Meteor.methods({
+	personInsert: function(personAttributes){
+		check(Meteor.userId(), String);
+		check(personAttributes,{
+			first_name: String,
+			middle_name: String,
+			last_name: String,
+			gender: String,			
+bdate: String,
+			pdate: String,
+			marital_status: String,
+			religion: String,
+			
+			category: String,
+			bank_name: String,
+			account: String,
+			baddress: String,
+			
+land_number: String,	
+pmobile_number: String,
+			email: String,
+			address: String,
+		
+			father_name: String,
+			father_status: String,
+			father_work: String,
+			mother_name: String,
+			mother_status: String,
+			mother_work: String,
+sibling_name: String			
+		});
+
+		var user = Meteor.user();
+		
+		var person = _.extend(personAttributes, {});
+	
+		var personId = Persons.insert(person);
+		
+		return {
+			_id: personId
+		};
+
+	}
+
+});

@@ -1,0 +1,263 @@
+<template name="addPerson">
+	<div class="row">
+		<form class="main form page">
+			<fieldset><legend>Personal Information</legend>
+				<div class="col-lg-4 ">
+					<div class="form-group" {{errorClass 'first_name'}}>
+						<label class="control-label" for="first_name">First Name</label>
+						<div class="controls">
+							<input name="first_name" id="first_name" type="text" value="" class="form-control" required/>
+							<span class="help-block">{{errorMessage 'first_name'}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="middle_name">Middle Name</label>
+						<div class="controls">
+							<input name="middle_name" id="middle_name" type="text" value="" placeholder="put na if none" class="form-control"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="last_name">Last Name</label>
+						<div class="controls">
+							<input name="last_name" id="last_name" type="text" value="" class="form-control" required/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 ">
+					<div class="form-group">
+				                <label class="control-label" for="gender">Gender</label>
+						<div class="controls">
+						        <label class="radio-inline">
+						            <input type="radio" name="gender" id="gender1" value="Male" required>Male
+						        </label>
+						        <label class="radio-inline">
+						            <input type="radio" name="gender" id="gender2" value="Female">Female
+						        </label>
+				            	</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="bdate">Date of Birth(yyyy-mm-dd)</label>
+						<div class="controls">
+							<input name="bdate" id="bdate" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="pdate">Place of Birth</label>
+						<div class="controls">
+							<input name="pdate" id="pdate" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 ">
+					<div class="form-group">
+				                <label class="control-label" for="status">Marital Status</label>
+						<div class="controls">
+						        <label class="radio-inline">
+						            <input type="radio" name="status" id="status1" value="Unmarried" checked>Unmarried
+						        </label>
+						        <label class="radio-inline">
+						            <input type="radio" name="status" id="status2" value="Married">Married
+						        </label>
+				            	</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="religion">Religion</label>
+						<div class="controls">
+							<input name="religion" id="religion" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="nationality">Nationality</label>
+						<div class="controls">
+							<select class="form-control" name="nationality" id="nationality">
+							    <option>Indian</option>
+							    <option>English</option>
+							    <option>American</option>
+							    <option>Australian</option>
+							    <option>Nepali</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-12 ">
+					<div class="form-group">
+						<label class="control-label" for="category">Class/ Category</label>
+						<div class="controls">
+						        <label class="radio-inline">
+						            <input type="radio" name="category" id="category1" value="General" Required>General
+						        </label>
+						        <label class="radio-inline">
+						            <input type="radio" name="category" id="category2" value="EBC">EBC
+						        </label>
+							<label class="radio-inline">
+						            <input type="radio" name="category" id="category3" value="SC">SC
+						        </label>
+						        <label class="radio-inline">
+						            <input type="radio" name="category" id="category4" value="ST">ST
+						        </label>
+
+							<label class="radio-inline">
+						            <input type="radio" name="category" id="category5" value="OBC">OBC
+						        </label>
+					        </div>			
+					</div>
+				</div>
+
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="bank_name">Bank Name</label>
+						<div class="controls">
+							<input name="bank_name" id="bank_name" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="account">Account Number</label>
+						<div class="controls">
+							<input name="account" id="account" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="baddress">Branch Address (Navelim, Margao, Panjin, etc.)</label>
+						<div class="controls">
+							<input name="baddress" id="baddress" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Family Information</legend>
+
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="Land_number">Landline Number</label>
+						<div class="controls">
+							<input name="Land_number" id="Land_number" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="pmobile_number">Parents' Mobile Number</label>
+						<div class="controls">
+							<input name="pmobile_number" id="pmobile_number" type="text" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 ">
+					<div class="form-group">
+						<label class="control-label" for="email">Email (replace with your own)</label>
+						<div class="controls">
+							<input name="email" id="email" type="email" value="" class="form-control"/>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label" for="address">Residential Address</label>
+					<div class="controls">
+						<textarea name="address" id="address" type="text" value="" placeholder="Enter house/flat no., Village/Town, Taluka, Pin Code" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 ">
+				<div class="form-group">
+					<label class="control-label" for="father_name">Father's Name(First & Last Name)</label>
+					<div class="controls">
+						<input name="father_name" id="father_name" type="text" value="" class="form-control"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 ">
+				<div class="form-group">
+					<label class="control-label" for="father_status">Is your Father Living</label>
+					<div class="controls">
+						<label class="radio-inline">
+				                    <input type="radio" name="father_status" id="father_status1" value="Yes" checked>Yes
+				                </label>
+				                <label class="radio-inline">
+				                    <input type="radio" name="father_status" id="father_status2" value="No">No
+				                </label>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 ">
+				<div class="form-group">
+					<label class="control-label" for="father_work">Father's Occupation</label>
+					<div class="controls">
+						<input name="father_work" id="father_work" type="text" value="" class="form-control"/>
+					</div>
+				</div>
+			</div>		
+		
+			<div class="col-lg-4 ">
+				<div class="form-group">
+					<label class="control-label" for="mother_name">Mother's Name(First & Last Name)</label>
+					<div class="controls">
+						<input name="mother_name" id="mother_name" type="text" value="" class="form-control"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 ">
+				<div class="form-group">
+					<label class="control-label" for="mother_status">Is your Mother Living</label>
+					<div class="controls">
+						<label class="radio-inline">
+				                    <input type="radio" name="mother_status" id="mother_status1" value="Yes" checked>Yes
+				                </label>
+				                <label class="radio-inline">
+				                    <input type="radio" name="mother_status" id="mother_status2" value="No">No
+				                </label>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 ">
+				<div class="form-group">
+					<label class="control-label" for="mother_work">Mother's Occupation</label>
+					<div class="controls">
+						<input name="mother_work" id="mother_work" type="text" value="" class="form-control"/>
+					</div>
+				</div>
+			</div>		
+			<div class="col-lg-6">
+				<div class="form-group">
+					<label class="control-label" for="siblings_name">Mention names of sibling if they studies in this college</label>
+					<div class="controls">
+						<input name="siblings_name" id="siblings_name" type="text" value="" class="form-control"/>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-12">
+				<input type="submit" value="Submit" class="btn btn-primary"/>
+			</div>
+		</form>
+	</div>
+	<br>
+	<br>
+</template>

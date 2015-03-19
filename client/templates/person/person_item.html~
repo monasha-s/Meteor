@@ -1,0 +1,4 @@
+<template name="personItem">
+	<span>{{first_name}}</span> <span>{{middle_name}}</span> <span>{{last_name}}</span>
+	<a href="{{pathFor 'personPage'}}" class="btn btn-default">Check</a>
+</template>

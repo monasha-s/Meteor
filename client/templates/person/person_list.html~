@@ -1,0 +1,9 @@
+<template name="personList">
+	<div class="list-group">
+		{{#each persons}}
+			<div class="list-group-item">
+				<p>{{> personItem}}</p>
+			</div>
+		{{/each}}
+	</div>
+</template>

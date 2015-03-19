@@ -1,0 +1,42 @@
+html,body{
+	direction: ltr;
+	background-color:white;
+	margin-top:0px;
+}
+
+.navbar-nav.navbar-right .dropdown-menu{
+	right:0px;
+	left:auto;
+}
+
+#login-dropdown-list input {
+    margin: 0px 0px 10px;
+    border-radius: 5px;
+}
+
+fieldset {
+    padding: 0.35em 0.625em 0.75em;
+    margin: 0px 16px;
+    border: 1px solid #E7E7E7;
+}
+
+legend{
+width:none!important;
+margin-bottom:0px;
+border: none;
+}
+
+#pPage .check{
+display:none;
+}
+
+.well p {
+    /*white-space: pre;*/
+}
+
+#pPage .well{
+	background-color: white;
+}
+.alert{
+	animation: fadeOut 2700ms ease-in 0s 1 forwards;
+}

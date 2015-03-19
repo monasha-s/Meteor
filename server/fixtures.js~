@@ -1,0 +1,11 @@
+if(Persons.find().count() == 0){
+	Persons.insert({
+		first_name: 'Lillian'
+	});
+	Persons.insert({
+		middle_name: 'Maria'
+	});
+	Persons.insert({
+		last_name: 'Vaz'
+	});
+}
